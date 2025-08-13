@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: rd-crm-dashboard
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: RDSTATION_API_TOKEN   # preencha no Render
+        sync: false
+      - key: RDSTATION_BASE_URL
+        value: https://crm.rdstation.com/api/v1
+      - key: PORT
+        value: 8050
+      - key: APP_USER
+        value: admin
+      - key: APP_PASS              # preencha no Render
+        sync: false
+      - key: AUTO_REFRESH_MS
+        value: 0
+
