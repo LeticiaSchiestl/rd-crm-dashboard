@@ -22,4 +22,4 @@ def get_data(endpoint):
 
 # Monta dados fictícios (exemplo simplificado)
 def load_data():
-    deals = pd.DataFrame(get_data("deals_
+    deals = pd.DataFrame(get_data("deals"))
